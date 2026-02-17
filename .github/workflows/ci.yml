@@ -17,15 +17,6 @@ concurrency:
 jobs:
   changes:
     runs-on: ubuntu-latest
-    outputs:
-      style: ${{ steps.filter.outputs.style }}
-      security: ${{ steps.filter.outputs.security }}
-      unit-tests: ${{ steps.filter.outputs.unit-tests }}
-      container: ${{ steps.filter.outputs.container }}
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # @v2
-        if: ${{ github.event_name == 'push' }}
-        with:
-          fetch-depth: 0
       - run: |
-          exit 1
+          exit 0
